@@ -1,0 +1,956 @@
+{
+  "_help": {
+    "lat_lon": "Where the wave breaks. Used for the map and to pick the nearest CDIP model point, weather, wind and water temperature.",
+    "mop": "Optional. Force a CDIP MOP point (e.g. B0418). If missing, the nearest point is chosen automatically.",
+    "normal": "Optional. Direction the beach faces, in degrees. If missing, taken from the CDIP point. Offshore wind = wind coming from normal + 180.",
+    "tide": "Ideal tide window [min, max] in ft (NOAA zero = MLLW).",
+    "size": "[works from, ideal low, ideal high, too big] in ft, wave height at the spot.",
+    "swellWin": "Ideal swell window [from, to] in degrees (where the swell comes from). Indicative.",
+    "priority": "1 = shown on the map when zoomed out, 2 = shown when zoomed in.",
+    "drive": "Driving time from Isla Vista."
+  },
+  "spots": [
+    {
+      "key": "silver-strand",
+      "name": "Silver Strand",
+      "region": "Ventura County",
+      "priority": 1,
+      "lat": 34.1605,
+      "lon": -119.2235,
+      "tide": [
+        1,
+        4.5
+      ],
+      "size": [
+        1.5,
+        3,
+        6,
+        9
+      ],
+      "swellWin": [
+        180,
+        290
+      ],
+      "drive": "1h05",
+      "type": "Beach break",
+      "wave": "Peaks, lefts and rights",
+      "level": "All levels",
+      "bottom": "Sand",
+      "desc": "Short stretch of beach between the Channel Islands Harbor and Port Hueneme jetties. Open to south swells that the rest of the coast never sees.",
+      "hazards": [
+        "Jetty rocks at both ends",
+        "Strong locals and crowds",
+        "Rip currents along the jetties"
+      ],
+      "tips": "One of the best options in summer on a south swell."
+    },
+    {
+      "key": "hollywood-beach",
+      "name": "Hollywood Beach",
+      "region": "Ventura County",
+      "priority": 2,
+      "lat": 34.1735,
+      "lon": -119.237,
+      "tide": [
+        1,
+        4.5
+      ],
+      "size": [
+        1.5,
+        2.5,
+        5,
+        8
+      ],
+      "swellWin": [
+        190,
+        290
+      ],
+      "drive": "1h",
+      "type": "Beach break",
+      "wave": "Lefts and rights",
+      "level": "All levels",
+      "bottom": "Sand",
+      "desc": "Wide Oxnard beach north of the harbor. Shifty sandbars, less crowded than Silver Strand.",
+      "hazards": [
+        "Closeouts on bigger days",
+        "Rip currents"
+      ],
+      "tips": "Look for the sandbars near the harbor jetty."
+    },
+    {
+      "key": "ventura-pier",
+      "name": "Ventura Pier",
+      "region": "Ventura County",
+      "priority": 2,
+      "lat": 34.274,
+      "lon": -119.2905,
+      "tide": [
+        1.5,
+        4.5
+      ],
+      "size": [
+        1.5,
+        2.5,
+        5,
+        8
+      ],
+      "swellWin": [
+        200,
+        290
+      ],
+      "drive": "50 min",
+      "type": "Beach break",
+      "wave": "Lefts and rights",
+      "level": "Beginner to intermediate",
+      "bottom": "Sand",
+      "desc": "Sandbars on both sides of the pier, downtown Ventura. Mellow and easy to check.",
+      "hazards": [
+        "Pier pilings",
+        "Poor water quality after rain"
+      ],
+      "tips": "Good backup when C Street is too crowded."
+    },
+    {
+      "key": "c-street",
+      "name": "C Street",
+      "region": "Ventura County",
+      "priority": 1,
+      "lat": 34.2775,
+      "lon": -119.2985,
+      "tide": [
+        0.5,
+        4
+      ],
+      "size": [
+        2,
+        3,
+        7,
+        12
+      ],
+      "swellWin": [
+        230,
+        300
+      ],
+      "drive": "50 min",
+      "type": "Point break",
+      "wave": "Right",
+      "level": "Beginner to advanced (by section)",
+      "bottom": "Cobblestones",
+      "desc": "Ventura's famous cobblestone right at Surfer's Point. Several sections, from the hollow top (Pipe) to the long mellow walls of California Street.",
+      "hazards": [
+        "Rocks and cobbles",
+        "Heavy crowds",
+        "Poor water quality after rain (Ventura River)"
+      ],
+      "tips": "Works on both west and south swells, one of the most consistent spots in the area."
+    },
+    {
+      "key": "emma-wood",
+      "name": "Emma Wood",
+      "region": "Ventura County",
+      "priority": 2,
+      "lat": 34.2885,
+      "lon": -119.3255,
+      "tide": [
+        0.5,
+        4
+      ],
+      "size": [
+        2,
+        3,
+        6,
+        10
+      ],
+      "swellWin": [
+        240,
+        300
+      ],
+      "drive": "50 min",
+      "type": "Reef / river mouth",
+      "wave": "Lefts and rights",
+      "level": "Intermediate",
+      "bottom": "Cobbles",
+      "desc": "Cobble reefs next to the Ventura River mouth and the freeway. Several peaks, usually less crowded than C Street.",
+      "hazards": [
+        "Cobbles",
+        "River runoff after rain"
+      ],
+      "tips": "The river mouth sandbar changes after winter storms."
+    },
+    {
+      "key": "solimar",
+      "name": "Solimar",
+      "region": "Ventura County",
+      "priority": 2,
+      "lat": 34.304,
+      "lon": -119.3495,
+      "tide": [
+        1,
+        4
+      ],
+      "size": [
+        3,
+        4,
+        8,
+        12
+      ],
+      "swellWin": [
+        250,
+        300
+      ],
+      "drive": "50 min",
+      "type": "Reef break",
+      "wave": "Left and right",
+      "level": "Advanced",
+      "bottom": "Rocky reef",
+      "desc": "Offshore reef that needs a solid west swell. Powerful and a long paddle out.",
+      "hazards": [
+        "Long paddle",
+        "Shallow reef",
+        "Strong currents"
+      ],
+      "tips": "Only worth it on a big west swell."
+    },
+    {
+      "key": "pitas-point",
+      "name": "Pitas Point",
+      "region": "Ventura County",
+      "priority": 2,
+      "lat": 34.32,
+      "lon": -119.388,
+      "tide": [
+        0,
+        3.5
+      ],
+      "size": [
+        3,
+        4,
+        8,
+        12
+      ],
+      "swellWin": [
+        255,
+        300
+      ],
+      "drive": "45 min",
+      "type": "Point break",
+      "wave": "Right",
+      "level": "Intermediate to advanced",
+      "bottom": "Cobbles and reef",
+      "desc": "A quality right point in front of the houses along the old highway. Lines up on west swells.",
+      "hazards": [
+        "Rocks",
+        "Crowds when it breaks",
+        "Limited parking"
+      ],
+      "tips": "Low to mid tide."
+    },
+    {
+      "key": "faria",
+      "name": "Faria",
+      "region": "Ventura County",
+      "priority": 2,
+      "lat": 34.3275,
+      "lon": -119.4065,
+      "tide": [
+        1,
+        4.5
+      ],
+      "size": [
+        2,
+        3,
+        6,
+        9
+      ],
+      "swellWin": [
+        240,
+        300
+      ],
+      "drive": "45 min",
+      "type": "Beach / reef",
+      "wave": "Lefts and rights",
+      "level": "All levels",
+      "bottom": "Sand and cobbles",
+      "desc": "Peaks along the beach park next to the 101. Mellow, good for longboards.",
+      "hazards": [
+        "Cobbles",
+        "Busy highway access"
+      ],
+      "tips": "Easy backup on the way to Rincon."
+    },
+    {
+      "key": "little-rincon",
+      "name": "Little Rincon",
+      "region": "Ventura County",
+      "priority": 2,
+      "lat": 34.3605,
+      "lon": -119.4465,
+      "tide": [
+        1,
+        4.5
+      ],
+      "size": [
+        2,
+        3,
+        6,
+        9
+      ],
+      "swellWin": [
+        250,
+        300
+      ],
+      "drive": "45 min",
+      "type": "Point / reef",
+      "wave": "Lefts and rights",
+      "level": "Beginner to intermediate",
+      "bottom": "Cobbles and reef",
+      "desc": "Just south of Rincon at Mussel Shoals. Softer and much calmer, great on a longboard when Rincon is packed.",
+      "hazards": [
+        "Cobbles",
+        "Parking along the highway"
+      ],
+      "tips": "The Mussel Shoals pier side is mellower."
+    },
+    {
+      "key": "rincon",
+      "name": "Rincon",
+      "region": "Santa Barbara",
+      "priority": 1,
+      "lat": 34.3735,
+      "lon": -119.4775,
+      "tide": [
+        0,
+        3.5
+      ],
+      "size": [
+        3,
+        4,
+        8,
+        14
+      ],
+      "swellWin": [
+        260,
+        300
+      ],
+      "drive": "40 min",
+      "type": "Point break",
+      "wave": "Right",
+      "level": "Intermediate to advanced",
+      "bottom": "Cobbles and rocks",
+      "desc": "The \"Queen of the Coast\". Three sections (Indicator, Rivermouth, the Cove) that can connect on good winter northwest swells.",
+      "hazards": [
+        "Very crowded",
+        "Rocks",
+        "Polluted water after rain (Rincon Creek)"
+      ],
+      "tips": "Indicator is the most accessible section."
+    },
+    {
+      "key": "tar-pits",
+      "name": "Tar Pits",
+      "region": "Santa Barbara",
+      "priority": 2,
+      "lat": 34.3875,
+      "lon": -119.512,
+      "tide": [
+        0.5,
+        4
+      ],
+      "size": [
+        2,
+        3,
+        6,
+        9
+      ],
+      "swellWin": [
+        250,
+        300
+      ],
+      "drive": "30 min",
+      "type": "Reef break",
+      "wave": "Right and left",
+      "level": "Intermediate",
+      "bottom": "Reef",
+      "desc": "Reef at the east end of Carpinteria State Beach, named after the natural tar seeps.",
+      "hazards": [
+        "Tar on the reef and beach",
+        "Rocks"
+      ],
+      "tips": "Bring something to clean the tar off your feet."
+    },
+    {
+      "key": "hammonds",
+      "name": "Hammond's Reef",
+      "region": "Santa Barbara",
+      "priority": 2,
+      "lat": 34.4185,
+      "lon": -119.6325,
+      "tide": [
+        0.5,
+        3.5
+      ],
+      "size": [
+        2.5,
+        3,
+        6,
+        10
+      ],
+      "swellWin": [
+        220,
+        300
+      ],
+      "drive": "25 min",
+      "type": "Reef break",
+      "wave": "Right",
+      "level": "Intermediate to advanced",
+      "bottom": "Shallow reef",
+      "desc": "Montecito reef with a fast right. Can get good on a west swell with a lower tide.",
+      "hazards": [
+        "Shallow reef",
+        "Tricky access and parking"
+      ],
+      "tips": "Low to mid tide."
+    },
+    {
+      "key": "leadbetter",
+      "name": "Leadbetter",
+      "region": "Santa Barbara",
+      "priority": 1,
+      "lat": 34.4005,
+      "lon": -119.6985,
+      "tide": [
+        1,
+        4
+      ],
+      "size": [
+        2,
+        3,
+        6,
+        9
+      ],
+      "swellWin": [
+        250,
+        300
+      ],
+      "drive": "20 min",
+      "type": "Point break",
+      "wave": "Right",
+      "level": "Beginner to intermediate",
+      "bottom": "Sand and reef",
+      "desc": "Mellow right point next to the Santa Barbara harbor. A longboard and beginner classic.",
+      "hazards": [
+        "Crowds",
+        "Rocks at the point"
+      ],
+      "tips": "Great on small to medium west swells."
+    },
+    {
+      "key": "sandspit",
+      "name": "Sandspit",
+      "region": "Santa Barbara",
+      "priority": 2,
+      "lat": 34.4045,
+      "lon": -119.686,
+      "tide": [
+        1,
+        4
+      ],
+      "size": [
+        3,
+        4,
+        8,
+        10
+      ],
+      "swellWin": [
+        255,
+        300
+      ],
+      "drive": "20 min",
+      "type": "Sandbar",
+      "wave": "Right",
+      "level": "Advanced",
+      "bottom": "Shallow sand",
+      "desc": "Heavy, hollow right off the end of the Santa Barbara harbor breakwater. Only wakes up on big west swells.",
+      "hazards": [
+        "Shallow and heavy",
+        "Breakwater rocks",
+        "Very competitive lineup"
+      ],
+      "tips": "Experienced surfers only."
+    },
+    {
+      "key": "goleta-beach",
+      "name": "Goleta Beach",
+      "region": "Isla Vista & Goleta",
+      "priority": 2,
+      "lat": 34.416,
+      "lon": -119.83,
+      "tide": [
+        1,
+        4
+      ],
+      "size": [
+        1,
+        2,
+        4,
+        6
+      ],
+      "swellWin": [
+        220,
+        300
+      ],
+      "drive": "5 min",
+      "type": "Beach break",
+      "wave": "Small peaks",
+      "level": "Beginner",
+      "bottom": "Sand",
+      "desc": "Sheltered beach next to the pier. Usually small, good to learn.",
+      "hazards": [
+        "Pier pilings",
+        "Poor water quality after rain (slough)"
+      ],
+      "tips": "Good when everything else is too big."
+    },
+    {
+      "key": "campus",
+      "name": "Campus Point",
+      "region": "Isla Vista & Goleta",
+      "priority": 2,
+      "lat": 34.4045,
+      "lon": -119.8445,
+      "mop": "B0385",
+      "tide": [
+        1.5,
+        4.5
+      ],
+      "size": [
+        1.5,
+        2.5,
+        5,
+        7
+      ],
+      "swellWin": [
+        180,
+        290
+      ],
+      "drive": "5 min",
+      "type": "Reef break",
+      "wave": "Right (and a few lefts)",
+      "level": "All levels",
+      "bottom": "Reef",
+      "desc": "The reef in front of UCSB, facing southeast. Northwest swells have to wrap around the point, so it's often smaller than Sands on a west swell.",
+      "hazards": [
+        "Shallow reef",
+        "Crowded (students)"
+      ],
+      "tips": "Good option when Sands is too big.",
+      "normal": 181
+    },
+    {
+      "key": "devereux",
+      "name": "Devereux",
+      "region": "Isla Vista & Goleta",
+      "priority": 2,
+      "lat": 34.4053,
+      "lon": -119.8768,
+      "mop": "B0414",
+      "tide": [
+        2.5,
+        5.5
+      ],
+      "size": [
+        2,
+        3,
+        6,
+        9
+      ],
+      "swellWin": [
+        250,
+        300
+      ],
+      "drive": "walk",
+      "type": "Point break",
+      "wave": "Right",
+      "level": "Beginner to intermediate",
+      "bottom": "Reef and sand",
+      "desc": "The point at the end of Sands. A long, often mushy right with several take-off zones. It can get hollow at the very tip.",
+      "hazards": [
+        "Rock boils at low tide",
+        "Very shallow at the tip of the point"
+      ],
+      "tips": "Pick the least crowded take-off zone.",
+      "normal": 147
+    },
+    {
+      "key": "sands",
+      "name": "Sands",
+      "region": "Isla Vista & Goleta",
+      "priority": 1,
+      "lat": 34.4078,
+      "lon": -119.8835,
+      "mop": "B0418",
+      "tide": [
+        2.5,
+        5.5
+      ],
+      "size": [
+        1,
+        2.5,
+        5,
+        8
+      ],
+      "swellWin": [
+        220,
+        300
+      ],
+      "drive": "walk",
+      "type": "Beach break",
+      "wave": "Lefts and rights",
+      "level": "All levels",
+      "bottom": "Sand, some rock shelves",
+      "desc": "Coal Oil Point beach, open to the west. Peaks shift with the sandbars; near the slough mouth it can get hollow when the banks are good.",
+      "hazards": [
+        "Natural tar (Coal Oil Point seeps)",
+        "Rock shelves at low tide",
+        "Rip currents on big swells"
+      ],
+      "tips": "Above ~5.5 ft of tide it gets mushy (seen on the spot).",
+      "normal": 238
+    },
+    {
+      "key": "haskells",
+      "name": "Haskell's",
+      "region": "Isla Vista & Goleta",
+      "priority": 2,
+      "lat": 34.4325,
+      "lon": -119.9185,
+      "tide": [
+        1.5,
+        4.5
+      ],
+      "size": [
+        2,
+        3,
+        6,
+        9
+      ],
+      "swellWin": [
+        240,
+        300
+      ],
+      "drive": "5 min",
+      "type": "Beach / reef",
+      "wave": "Lefts and rights",
+      "level": "Intermediate",
+      "bottom": "Sand and reef",
+      "desc": "In front of the Bacara resort. Reef and sand peaks, usually quieter than Sands.",
+      "hazards": [
+        "Rocks",
+        "Limited public parking"
+      ],
+      "tips": "Public access path next to the resort."
+    },
+    {
+      "key": "el-capitan",
+      "name": "El Capitan",
+      "region": "Gaviota Coast",
+      "priority": 1,
+      "lat": 34.4583,
+      "lon": -120.0245,
+      "tide": [
+        0,
+        3.5
+      ],
+      "size": [
+        4,
+        5,
+        9,
+        14
+      ],
+      "swellWin": [
+        255,
+        295
+      ],
+      "drive": "20 min",
+      "type": "Point break",
+      "wave": "Right",
+      "level": "Intermediate to advanced",
+      "bottom": "Cobbles and boulders",
+      "desc": "A long cobble right point that only wakes up on big west swells. When it works, it's one of the best waves in the county.",
+      "hazards": [
+        "Big cobbles (booties recommended)",
+        "Don't sit too deep",
+        "Crowded as soon as it breaks"
+      ],
+      "tips": "Low to mid tide, west swell of 5 ft and more."
+    },
+    {
+      "key": "refugio",
+      "name": "Refugio",
+      "region": "Gaviota Coast",
+      "priority": 2,
+      "lat": 34.4625,
+      "lon": -120.07,
+      "tide": [
+        0,
+        3.5
+      ],
+      "size": [
+        3,
+        4,
+        7,
+        10
+      ],
+      "swellWin": [
+        255,
+        300
+      ],
+      "drive": "25 min",
+      "type": "Point break",
+      "wave": "Right",
+      "level": "Beginner to intermediate",
+      "bottom": "Cobbles",
+      "desc": "Small cobble right point at the state beach campground. Mellow, a longboard wave.",
+      "hazards": [
+        "Cobbles",
+        "Campground fees"
+      ],
+      "tips": "Needs a decent west swell."
+    },
+    {
+      "key": "jalama",
+      "name": "Jalama",
+      "region": "Lompoc & Point Conception",
+      "priority": 1,
+      "lat": 34.5105,
+      "lon": -120.5025,
+      "tide": [
+        1,
+        4.5
+      ],
+      "size": [
+        2,
+        3,
+        6,
+        10
+      ],
+      "swellWin": [
+        200,
+        320
+      ],
+      "drive": "1h10",
+      "type": "Beach break",
+      "wave": "Lefts and rights",
+      "level": "Intermediate to advanced",
+      "bottom": "Sand and reef",
+      "desc": "Exposed beach north of Point Conception that picks up almost every swell. Often windy in the afternoon.",
+      "hazards": [
+        "Strong northwest wind",
+        "Rip currents",
+        "Sharks",
+        "Remote (day-use fee)"
+      ],
+      "tips": "Go early, before the wind."
+    },
+    {
+      "key": "surf-beach",
+      "name": "Surf Beach",
+      "region": "Lompoc & Point Conception",
+      "priority": 2,
+      "lat": 34.6835,
+      "lon": -120.6045,
+      "tide": [
+        1.5,
+        4.5
+      ],
+      "size": [
+        2,
+        3,
+        6,
+        9
+      ],
+      "swellWin": [
+        220,
+        320
+      ],
+      "drive": "1h",
+      "type": "Beach break",
+      "wave": "Lefts and rights",
+      "level": "Advanced",
+      "bottom": "Sand",
+      "desc": "Very exposed beach on Vandenberg land near Lompoc. Powerful and often closed out.",
+      "hazards": [
+        "Closed during snowy plover nesting (spring and summer)",
+        "Sharks (history of attacks)",
+        "Strong currents"
+      ],
+      "tips": "Check access rules before going."
+    },
+    {
+      "key": "pismo-pier",
+      "name": "Pismo Beach Pier",
+      "region": "San Luis Obispo",
+      "priority": 1,
+      "lat": 35.1385,
+      "lon": -120.6435,
+      "tide": [
+        1,
+        4.5
+      ],
+      "size": [
+        1.5,
+        2.5,
+        5,
+        8
+      ],
+      "swellWin": [
+        220,
+        300
+      ],
+      "drive": "1h20",
+      "type": "Beach break",
+      "wave": "Lefts and rights",
+      "level": "All levels",
+      "bottom": "Sand",
+      "desc": "Sandbars on both sides of the pier. Consistent and easy, the go-to spot in the south of the county.",
+      "hazards": [
+        "Pier pilings",
+        "Crowds near the pier"
+      ],
+      "tips": "Usually smaller than the exposed beaches."
+    },
+    {
+      "key": "avila",
+      "name": "Avila Beach",
+      "region": "San Luis Obispo",
+      "priority": 2,
+      "lat": 35.1785,
+      "lon": -120.733,
+      "tide": [
+        1,
+        4.5
+      ],
+      "size": [
+        1,
+        2,
+        4,
+        6
+      ],
+      "swellWin": [
+        180,
+        260
+      ],
+      "drive": "1h30",
+      "type": "Beach break",
+      "wave": "Small peaks",
+      "level": "Beginner",
+      "bottom": "Sand",
+      "desc": "South-facing, sheltered from the northwest wind and swell. Small and mellow most of the time.",
+      "hazards": [
+        "Pier pilings"
+      ],
+      "tips": "A refuge when the wind is blowing everywhere else."
+    },
+    {
+      "key": "hazards",
+      "name": "Hazard Canyon",
+      "region": "San Luis Obispo",
+      "priority": 2,
+      "lat": 35.289,
+      "lon": -120.886,
+      "tide": [
+        1,
+        4
+      ],
+      "size": [
+        3,
+        4,
+        8,
+        12
+      ],
+      "swellWin": [
+        260,
+        320
+      ],
+      "drive": "1h45",
+      "type": "Reef break",
+      "wave": "Left and right",
+      "level": "Advanced",
+      "bottom": "Rocky reef",
+      "desc": "Heavy reef in Montaña de Oro State Park. Hollow and powerful on a northwest swell.",
+      "hazards": [
+        "Shallow, sharp reef",
+        "Heavy waves",
+        "Sharks"
+      ],
+      "tips": "Experienced surfers only."
+    },
+    {
+      "key": "morro-bay",
+      "name": "Morro Bay",
+      "region": "San Luis Obispo",
+      "priority": 1,
+      "lat": 35.3725,
+      "lon": -120.8665,
+      "tide": [
+        1,
+        4.5
+      ],
+      "size": [
+        2,
+        3,
+        6,
+        10
+      ],
+      "swellWin": [
+        250,
+        320
+      ],
+      "drive": "1h45",
+      "type": "Beach break",
+      "wave": "Lefts and rights",
+      "level": "Intermediate",
+      "bottom": "Sand",
+      "desc": "Beach peaks just north of Morro Rock. Picks up a lot of northwest swell.",
+      "hazards": [
+        "Harbor mouth currents",
+        "Sharks",
+        "Cold water"
+      ],
+      "tips": "The north side of the rock is the most consistent."
+    },
+    {
+      "key": "cayucos",
+      "name": "Cayucos Pier",
+      "region": "San Luis Obispo",
+      "priority": 2,
+      "lat": 35.4485,
+      "lon": -120.906,
+      "tide": [
+        1,
+        4.5
+      ],
+      "size": [
+        1.5,
+        2.5,
+        5,
+        8
+      ],
+      "swellWin": [
+        230,
+        300
+      ],
+      "drive": "1h55",
+      "type": "Beach break",
+      "wave": "Lefts and rights",
+      "level": "All levels",
+      "bottom": "Sand",
+      "desc": "Small beach town with peaks around the pier. A bit sheltered from the northwest wind.",
+      "hazards": [
+        "Pier pilings",
+        "Cold water"
+      ],
+      "tips": "Good longboard spot."
+    }
+  ]
+}
